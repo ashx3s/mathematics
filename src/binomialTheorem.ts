@@ -1,24 +1,10 @@
-function getFactorial(num: number) {
-  // expand number into it's factorial form
-  const factorialValues: number[] = [];
-  for (let i = 1; i <= num; i++) {
-    factorialValues.push(i);
-  }
-  // calculate factorial
-  const factorialProduct = factorialValues.reduce((acc, curr) => {
-    return acc * curr;
-  }, 1);
-
-  return factorialProduct;
-}
-function nChooseK(n: number, k: number): number {
-  const nFactorial = getFactorial(n);
-  const nk = n - k;
-  const denominator = getFactorial(nk) * getFactorial(k);
-  return nFactorial / denominator;
-}
+import nChooseK from "./nChooseK";
 
 function binomialTheorem(a: number, b: number, n: number): number {
+  if (!a || !b || !n) {
+    throw new Error("All parameters must be non-zero");
+  }
+
   const terms: number[] = [];
   for (let k = 0; k <= n; k++) {
     const coeffecient = nChooseK(n, k);
