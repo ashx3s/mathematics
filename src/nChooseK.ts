@@ -1,6 +1,6 @@
 import getFactorial from "./getFactorial";
 
-export default function (n: number, k: number): number {
+function nChooseK(n: number, k: number): number {
   if (!n || !k) {
     throw new Error("Both parameters must be non-zero");
   }
@@ -10,3 +10,5 @@ export default function (n: number, k: number): number {
   const denominator = getFactorial(nk) * getFactorial(k);
   return nFactorial / denominator;
 }
+
+export default nChooseK;

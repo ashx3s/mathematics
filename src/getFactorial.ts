@@ -1,4 +1,4 @@
-export default function (num: number) {
+function getFactorial(num: number) {
   if (!num) {
     throw new Error("Input must be a non-zero number");
   }
@@ -14,3 +14,5 @@ export default function (num: number) {
 
   return factorialProduct;
 }
+
+export default getFactorial;
