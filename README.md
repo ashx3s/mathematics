@@ -6,21 +6,23 @@ A TypeScript project for exploring mathematical concepts, functions, classes, an
 
 1. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 ## Development
 
 ### Available Scripts
 
-- `npm run dev` - Start TypeScript compiler in watch mode
-- `npm run build` - Build the project to the `dist` directory
-- `npm run test` - Run Jest tests
-- `npm run test:watch` - Run Jest tests in watch mode
-- `npm run test:coverage` - Run Jest tests with coverage report
-- `npm run lint` - Run ESLint on TypeScript files
-- `npm run lint:fix` - Run ESLint and automatically fix issues
-- `npm run format` - Format code with Prettier
+- `pnpm dev` - Start TypeScript compiler in watch mode
+- `pnpm build` - Build the project to the `dist` directory
+- `pnpm start` - Run the compiled application
+- `pnpm start:dev` - Build and run the application (build + start)
+- `pnpm test` - Run Jest tests
+- `pnpm test:watch` - Run Jest tests in watch mode
+- `pnpm test:coverage` - Run Jest tests with coverage report
+- `pnpm lint` - Run ESLint on TypeScript files
+- `pnpm lint:fix` - Run ESLint and automatically fix issues
+- `pnpm format` - Format code with Prettier
 
 ### Project Structure
 
@@ -36,9 +38,10 @@ coverage/     # Jest coverage reports (generated)
 1. Write your mathematical functions and classes in the `src` directory
 2. Create corresponding test files in `src/__tests__/` (e.g., `myFunction.test.ts`)
 3. Import and use functions in `src/index.ts` or create new files
-4. Run `npm run dev` to compile in watch mode as you develop
-5. Run `npm run test` to verify your implementations
-6. Run `npm run build` to create a production build
+4. Run `pnpm dev` to compile in watch mode as you develop
+5. Run `pnpm test` to verify your implementations
+6. Run `pnpm start:dev` to build and run your code
+7. Run `pnpm build` to create a production build
 
 ### Code Style
 
