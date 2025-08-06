@@ -5,16 +5,15 @@ function binomialTheorem(a: number, b: number, n: number): number {
     throw new Error("the exponent n must be an integer greater than 0");
   }
 
-  const terms: number[] = [];
+  let sum = 0;
   for (let k = 0; k <= n; k++) {
     const coefficient = nChooseK(n, k);
     const aExponent = n - k;
     const aValue = Math.pow(a, aExponent);
     const bValue = Math.pow(b, k);
-    const term = coefficient * aValue * bValue;
-    terms.push(term);
+    sum += coefficient * aValue * bValue;
   }
-  return terms.reduce((acc, curr) => acc + curr);
+  return sum;
 }
 
 export default binomialTheorem;
