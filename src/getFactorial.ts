@@ -1,8 +1,7 @@
 function getFactorial(num: number) {
-  if (!num) {
-    throw new Error("Input must be a non-zero number");
+  if (num < 0 || !Number.isInteger(num)) {
+    throw new Error("Factorial is only defined for non-negative integers");
   }
-  // expand number into it's factorial form
   const factorialValues: number[] = [];
   for (let i = 1; i <= num; i++) {
     factorialValues.push(i);
