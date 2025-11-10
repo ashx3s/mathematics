@@ -53,8 +53,7 @@ describe("Mathematical Functions Examples", () => {
 
   describe("Array and Sequence Operations", () => {
     test("should calculate sum of array", () => {
-      const sum = (numbers: number[]): number =>
-        numbers.reduce((acc, num) => acc + num, 0);
+      const sum = (numbers: number[]): number => numbers.reduce((acc, num) => acc + num, 0);
 
       expect(sum([1, 2, 3, 4, 5])).toBe(15);
       expect(sum([])).toBe(0);
