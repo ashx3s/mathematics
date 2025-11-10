@@ -1,4 +1,4 @@
-function factorial(n: number): number {
+const factorial = (n: number): number => {
   if (n < 0 || !Number.isInteger(n)) {
     throw new Error("Factorial is only defined for non-negative integers");
   }
@@ -7,6 +7,6 @@ function factorial(n: number): number {
     (acc: number, curr: number): number => acc * curr,
     1
   );
-}
+};
 
 export { factorial };
