@@ -1,7 +1,7 @@
 {
-  "name": "mathematics-typescript",
+  "name": "Elucidations",
   "version": "1.0.0",
-  "description": "TypeScript project for exploring mathematical concepts and theorems",
+  "description": "A project to explore math, logic, and programming in typescript.",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
