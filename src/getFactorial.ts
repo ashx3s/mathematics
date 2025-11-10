@@ -1,17 +1,10 @@
-function getFactorial(num: number) {
-  if (num < 0 || !Number.isInteger(num)) {
+function getFactorial(n: number) {
+  if (n < 0 || !Number.isInteger(n)) {
     throw new Error("Factorial is only defined for non-negative integers");
   }
-  const factorialValues: number[] = [];
-  for (let i = 1; i <= num; i++) {
-    factorialValues.push(i);
-  }
-  // calculate factorial
-  const factorialProduct = factorialValues.reduce((acc, curr) => {
-    return acc * curr;
-  }, 1);
-
-  return factorialProduct;
+  if (n === 0) return 1;
+  // create an array from the number and add the values to it
+  return Array.from({ length: n }, (_, k) => k + 1).reduce((acc, curr) => acc * curr, 1);
 }
 
 export default getFactorial;
