@@ -4,7 +4,7 @@
  */
 
 import binomialTheorem from "./binomialTheorem";
-
+import getFactorial from "./getFactorial";
 /**
  * Simple factorial function for demonstration
  */
@@ -26,6 +26,8 @@ function main(): void {
   console.log("Binomial Function Terms Array");
   console.log(binomialTheorem(5, 2, 3));
   console.log("\nProject is working correctly!");
+  console.log("GetFactorial Function");
+  console.log(getFactorial(5));
 }
 
 // Run main function if this file is executed directly
