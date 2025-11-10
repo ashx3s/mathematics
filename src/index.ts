@@ -3,20 +3,9 @@
  * Entry point for mathematical functions, classes, and explorations
  */
 
-import binomialTheorem from "./binomialTheorem";
-import getFactorial from "./getFactorial";
-/**
- * Simple factorial function for demonstration
- */
-function factorial(n: number): number {
-  if (n < 0) throw new Error("Factorial not defined for negative numbers");
-  if (n === 0 || n === 1) return 1;
-  return n * factorial(n - 1);
-}
+import { binomialExpansion } from "./combinatorices/binomial";
+import { factorial } from "./combinatorices/core";
 
-/**
- * Main function to demonstrate mathematical concepts
- */
 function main(): void {
   console.log("Mathematics TypeScript Project");
   console.log("==============================");
@@ -24,10 +13,10 @@ function main(): void {
   // Example mathematical calculations
 
   console.log("Binomial Function Terms Array");
-  console.log(binomialTheorem(5, 2, 3));
+  console.log(binomialExpansion(5, 2, 3));
   console.log("\nProject is working correctly!");
   console.log("GetFactorial Function");
-  console.log(getFactorial(5));
+  console.log(factorial(5));
 }
 
 // Run main function if this file is executed directly
@@ -35,4 +24,4 @@ if (require.main === module) {
   main();
 }
 
-export { main, factorial };
+export { main };
